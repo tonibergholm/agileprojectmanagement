@@ -1,0 +1,24 @@
+<h1>Editing sprint</h1>
+
+<% form_for(@sprint) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :deadline %><br />
+    <%= f.date_select :deadline %>
+  </p>
+  <p>
+    <%= f.label :release_id %><br />
+    <%= f.text_field :release_id %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @sprint %> |
+<%= link_to 'Back', sprints_path %>

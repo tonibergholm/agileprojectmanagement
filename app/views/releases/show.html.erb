@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @release.name %>
+</p>
+
+<p>
+  <b>Deadline:</b>
+  <%=h @release.deadline %>
+</p>
+
+
+<%= link_to 'Edit', edit_release_path(@release) %> |
+<%= link_to 'Back', releases_path %>

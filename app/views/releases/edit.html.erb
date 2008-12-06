@@ -1,0 +1,20 @@
+<h1>Editing release</h1>
+
+<% form_for(@release) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :deadline %><br />
+    <%= f.date_select :deadline %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @release %> |
+<%= link_to 'Back', releases_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  deadline: 2008-12-06
+  release_id: 1
+
+two:
+  name: MyString
+  deadline: 2008-12-06
+  release_id: 1

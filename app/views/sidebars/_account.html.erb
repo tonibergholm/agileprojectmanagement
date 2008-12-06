@@ -1,0 +1,9 @@
+<ul>
+	<li id="right_side_menu">
+		<h2>What to do?</h2>
+		<ul>
+		  <li><%= link_to "My Account", account_path %></li>
+		  <li><%= link_to "Logout", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?" %></li>
+		</ul>
+	</li>
+</ul>
