@@ -8,6 +8,11 @@
   <%=h @release.deadline %>
 </p>
 
+<p>
+  <b>Release:</b>
+  <%=h @release.project_id %>
+</p>
+
 
 <%= link_to 'Edit', edit_release_path(@release) %> |
 <%= link_to 'Back', releases_path %>

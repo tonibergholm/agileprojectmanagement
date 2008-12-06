@@ -3,45 +3,45 @@ class ReleasesController < ApplicationController
   # GET /releases.xml
   def index
     @releases = Release.find(:all)
-
+  
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @releases }
     end
   end
-
+  
   # GET /releases/1
   # GET /releases/1.xml
   def show
     @release = Release.find(params[:id])
-
+  
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @release }
     end
   end
-
+  
   # GET /releases/new
   # GET /releases/new.xml
   def new
     @release = Release.new
-
+  
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @release }
     end
   end
-
+  
   # GET /releases/1/edit
   def edit
     @release = Release.find(params[:id])
   end
-
+  
   # POST /releases
   # POST /releases.xml
   def create
     @release = Release.new(params[:release])
-
+  
     respond_to do |format|
       if @release.save
         flash[:notice] = 'Release was successfully created.'
@@ -53,12 +53,12 @@ class ReleasesController < ApplicationController
       end
     end
   end
-
+  
   # PUT /releases/1
   # PUT /releases/1.xml
   def update
     @release = Release.find(params[:id])
-
+  
     respond_to do |format|
       if @release.update_attributes(params[:release])
         flash[:notice] = 'Release was successfully updated.'
@@ -70,13 +70,13 @@ class ReleasesController < ApplicationController
       end
     end
   end
-
+  
   # DELETE /releases/1
   # DELETE /releases/1.xml
   def destroy
     @release = Release.find(params[:id])
     @release.destroy
-
+  
     respond_to do |format|
       format.html { redirect_to(releases_url) }
       format.xml  { head :ok }
