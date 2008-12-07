@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20081206094952
+# Schema version: 20081206112914
 #
 # Table name: hours
 #
@@ -14,4 +14,6 @@
 #
 
 class Hour < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :task
 end

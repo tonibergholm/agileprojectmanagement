@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20081206094952
+# Schema version: 20081206112914
 #
 # Table name: stories
 #
@@ -16,4 +16,7 @@
 #
 
 class Story < ActiveRecord::Base
+  belongs_to :project
+  belongs_to :sprint
+  has_many :tasks
 end

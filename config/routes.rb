@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :entities
+
   map.resources :hours
 
   map.resources :tasks

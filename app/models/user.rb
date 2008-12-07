@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20081206094952
+# Schema version: 20081206112914
 #
 # Table name: users
 #
@@ -19,9 +19,16 @@
 #  perishable_token  :string(255)     default(""), not null
 #  email             :string(255)     default(""), not null
 #  openid_identifier :string(255)
+#  entity_id         :integer(4)
 #
 
 class User < ActiveRecord::Base
+  has_one :entity, :foreign_key => 'owner_id'
+  has_many :members
+  has_many :hours
+  has_many :tasks
+  has_many :projects, :through => :members
+  has_many :roles, :through => :members
   # ALL of the following code is for OpenID integration. If you are not using OpenID in your app
   # just remove all of the following code, to the point where you User class is completely blank.
   acts_as_authentic :login_field_validation_options => {:if => :openid_identifier_blank?}, :password_field_validation_options => {:if => :openid_identifier_blank?}

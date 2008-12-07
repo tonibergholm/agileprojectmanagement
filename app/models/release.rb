@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20081206094952
+# Schema version: 20081206112914
 #
 # Table name: releases
 #
@@ -13,4 +13,5 @@
 #
 
 class Release < ActiveRecord::Base
+  belongs_to :project
 end

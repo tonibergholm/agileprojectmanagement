@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20081206094952
+# Schema version: 20081206112914
 #
 # Table name: tasks
 #
@@ -13,4 +13,7 @@
 #
 
 class Task < ActiveRecord::Base
+  belongs_to :story
+  belongs_to :user
+  has_many :hours
 end

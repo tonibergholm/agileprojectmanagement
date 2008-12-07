@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20081206094952
+# Schema version: 20081206112914
 #
 # Table name: users
 #
@@ -19,6 +19,7 @@
 #  perishable_token  :string(255)     default(""), not null
 #  email             :string(255)     default(""), not null
 #  openid_identifier :string(255)
+#  entity_id         :integer(4)
 #
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html

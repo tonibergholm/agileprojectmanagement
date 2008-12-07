@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20081206094952
+# Schema version: 20081206112914
 #
 # Table name: projects
 #
@@ -8,10 +8,13 @@
 #  description :text
 #  created_at  :datetime
 #  updated_at  :datetime
+#  entity_id   :integer(4)
 #
 
 class Project < ActiveRecord::Base
   has_many :members
   has_many :releases
   has_many :stories
+  belongs_to :entity
+  has_many :users, :through => :member
 end
