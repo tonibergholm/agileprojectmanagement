@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20081206112914
+# Schema version: 20081207091433
 #
 # Table name: tasks
 #
@@ -10,6 +10,7 @@
 #  status      :integer(4)      default(0), not null
 #  created_at  :datetime
 #  updated_at  :datetime
+#  user_id     :integer(4)
 #
 
 class Task < ActiveRecord::Base

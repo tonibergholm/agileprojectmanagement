@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20081206112914
+# Schema version: 20081207091433
 #
 # Table name: sprints
 #
@@ -14,4 +14,5 @@
 
 class Sprint < ActiveRecord::Base
   has_many :stories
+  belongs_to :release
 end
