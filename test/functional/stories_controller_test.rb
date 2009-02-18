@@ -14,7 +14,7 @@ class StoriesControllerTest < ActionController::TestCase
 
   test "should create story" do
     assert_difference('Story.count') do
-      post :create, :story => { }
+      post :create, :story => { :project_id => 1, :sprint_id => 1, :name => 'MyString', :description => 'MyText', :business_value => 1, :estimate => 1 }
     end
 
     assert_redirected_to story_path(assigns(:story))

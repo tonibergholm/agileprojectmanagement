@@ -16,9 +16,7 @@
 one:
   name: MyString
   description: MyText
-  release_id: 1
 
 two:
   name: MyString
   description: MyText
-  release_id: 1

@@ -1,0 +1,23 @@
+<p>
+  <b>Task:</b>
+  <%=h @hour_entry.task_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @hour_entry.user_id %>
+</p>
+
+<p>
+  <b>Time entry:</b>
+  <%=h @hour_entry.time_entry %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @hour_entry.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_hour_entry_path(@hour_entry) %> |
+<%= link_to 'Back', hour_entries_path %>

@@ -16,5 +16,5 @@
 class Task < ActiveRecord::Base
   belongs_to :story
   belongs_to :user
-  has_many :hours
+  has_many :hour_entries
 end

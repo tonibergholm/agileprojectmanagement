@@ -14,7 +14,7 @@ class SprintsControllerTest < ActionController::TestCase
 
   test "should create sprint" do
     assert_difference('Sprint.count') do
-      post :create, :sprint => { }
+      post :create, :sprint => { :name => 'MyString', :deadline => 2008-12-06, :release_id => 1 }
     end
 
     assert_redirected_to sprint_path(assigns(:sprint))

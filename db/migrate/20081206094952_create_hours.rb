@@ -1,10 +1,10 @@
 class CreateHours < ActiveRecord::Migration
   def self.up
-    create_table :hours do |t|
+    create_table :hour_entries do |t|
       t.integer :task_id
       t.integer :user_id, :null => false
       t.date :day, :null => false
-      t.float :hour_entry, :null => false
+      t.float :time_entry, :null => false
       t.string :description, :null => false
 
       t.timestamps
@@ -12,6 +12,6 @@ class CreateHours < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :hours
+    drop_table :hour_entries
   end
 end

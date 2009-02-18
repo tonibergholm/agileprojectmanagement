@@ -1,0 +1,2 @@
+module HourEntriesHelper
+end

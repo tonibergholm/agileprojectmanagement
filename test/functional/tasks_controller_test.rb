@@ -14,7 +14,7 @@ class TasksControllerTest < ActionController::TestCase
 
   test "should create task" do
     assert_difference('Task.count') do
-      post :create, :task => { }
+      post :create, :task => { :story_id => 1, :name => 'MyString', :description => 'MyText' }
     end
 
     assert_redirected_to task_path(assigns(:task))

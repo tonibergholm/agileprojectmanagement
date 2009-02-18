@@ -1,0 +1,26 @@
+<h1>Listing hour_entries</h1>
+
+<table>
+  <tr>
+    <th>Task</th>
+    <th>User</th>
+    <th>Hour entry</th>
+    <th>Description</th>
+  </tr>
+
+<% for hour_entries in @hour_entries %>
+  <tr>
+    <td><%=h hour_entries.task_id %></td>
+    <td><%=h hour_entries.user_id %></td>
+    <td><%=h hour_entries.time_entry %></td>
+    <td><%=h hour_entries.description %></td>
+    <td><%= link_to 'Show', hour_entries %></td>
+    <td><%= link_to 'Edit', edit_hour_entry_path(hour_entries) %></td>
+    <td><%= link_to 'Destroy', hour_entries, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New hour_entry', new_hour_entry_path %>

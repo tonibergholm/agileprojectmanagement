@@ -14,10 +14,10 @@ class UsersControllerTest < ActionController::TestCase
 
   test "should create user" do
     assert_difference('User.count') do
-      post :create, :user => { }
+      post :create, :user => { :login => 'MyString-new', :crypted_password => 'MyString', :password_salt => 'MyString', :persistence_token => 'MyString', :login_count => 1, :last_request_at => '2008-12-04 16:14:51', :last_login_at => '2008-12-04 16:14:51', :current_login_at => '2008-12-04 16:14:51', :last_login_ip => 'MyString', :current_login_ip => 'MyString' }
     end
 
-    assert_redirected_to user_path(assigns(:user))
+    assert_redirected_to account_path(assigns(:user))
   end
 
   test "should show user" do
@@ -31,8 +31,8 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should update user" do
-    put :update, :id => users(:one).id, :user => { }
-    assert_redirected_to user_path(assigns(:user))
+    put :update, :id => users(:one).id, :user => { :login => 'MyString-new', :crypted_password => 'MyString2', :password_salt => 'MyString', :persistence_token => 'MyString', :login_count => 1, :last_request_at => '2008-12-04 16:14:51', :last_login_at => '2008-12-04 16:14:51', :current_login_at => '2008-12-04 16:14:51', :last_login_ip => 'MyString', :current_login_ip => 'MyString' }
+    assert_redirected_to account_path(assigns(:user))
   end
 
   test "should destroy user" do
@@ -40,6 +40,6 @@ class UsersControllerTest < ActionController::TestCase
       delete :destroy, :id => users(:one).id
     end
 
-    assert_redirected_to users_path
+    assert_redirected_to accounts_path
   end
 end

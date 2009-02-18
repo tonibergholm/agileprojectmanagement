@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-	<title><%= controller.controller_name %>: <%= controller.action_name %></title>
+	<title>Agile project management - <%= controller.controller_name %>: <%= controller.action_name %></title>
 	<%= stylesheet_link_tag 'scaffold' %>
 	<%= stylesheet_link_tag 'visual' %>
 	<%= stylesheet_link_tag 'redbox' %>
@@ -16,7 +16,6 @@
 	<div id="header">
 		<div id="logo">
 			<h1><a href="/">agile project management</a></h1>
-			<p><%= pluralize User.logged_in.count, "user" %> currently logged in</p>
 		</div>
 		<div id="notice">
 			<p style="color: grey"><%= flash[:notice] %></p>
@@ -55,13 +54,15 @@
 <!-- start footer -->
 <div id="footer">
 <p id="footer_text">
-	<!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp;
-	Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a> 
+	© <a href="http://www.serviceonrails.com/">Service on Rails</a>
 	&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-	Icons by <a href="http://famfamfam.com/">FAMFAMFAM</a>.	 -->
+	Icons by <a href="http://famfamfam.com/">FAMFAMFAM</a>	
+	&nbsp;&nbsp;&bull;&nbsp;&nbsp;
 	<a href="http://validator.w3.org/check/referer" class="xhtml" title="This page validates as XHTML">Valid <abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> 
 	&nbsp;&nbsp;&bull;&nbsp;&nbsp; 
-	<a href="http://jigsaw.w3.org/css-validator/check/referer" class="css" title="This page validates as CSS">Valid <abbr title="Cascading Style Sheets">CSS</abbr></a> </p>
+	<a href="http://jigsaw.w3.org/css-validator/check/referer" class="css" title="This page validates as CSS">Valid <abbr title="Cascading Style Sheets">CSS</abbr></a>
+	&nbsp;&nbsp;&bull;&nbsp;&nbsp;<%= pluralize User.logged_in.count, "user" %> currently logged in
+	</p>
 <!-- end footer -->
 </div>
 </body>

@@ -27,7 +27,6 @@ one:
 
 two:
   project_id: 1
-  sprint_id: 1
   name: MyString
   description: MyText
   business_value: 1

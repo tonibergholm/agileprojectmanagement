@@ -1,0 +1,28 @@
+<h1>Editing hour_entry</h1>
+
+<% form_for(@hour_entry) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :task_id %><br />
+    <%= f.text_field :task_id %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :time_entry %><br />
+    <%= f.text_field :time_entry %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @hour_entry %> |
+<%= link_to 'Back', hour_entries_path %>

@@ -14,7 +14,7 @@ class EntitiesControllerTest < ActionController::TestCase
 
   test "should create entity" do
     assert_difference('Entity.count') do
-      post :create, :entity => { }
+      post :create, :entity => {:name => 'MyString', :owner_id => 1 }
     end
 
     assert_redirected_to entity_path(assigns(:entity))

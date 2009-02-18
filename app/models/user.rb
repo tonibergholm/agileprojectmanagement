@@ -25,7 +25,7 @@
 class User < ActiveRecord::Base
   has_one :entity, :foreign_key => 'owner_id'
   has_many :members
-  has_many :hours
+  has_many :hour_entries
   has_many :tasks
   has_many :projects, :through => :members
   has_many :roles, :through => :members

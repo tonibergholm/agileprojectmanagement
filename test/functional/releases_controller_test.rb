@@ -14,7 +14,7 @@ class ReleasesControllerTest < ActionController::TestCase
 
   test "should create release" do
     assert_difference('Release.count') do
-      post :create, :release => { }
+      post :create, :release => { :name => 'MyString', :deadline => 2008-12-06, :project_id => 1 }
     end
 
     assert_redirected_to release_path(assigns(:release))

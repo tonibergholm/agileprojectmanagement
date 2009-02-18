@@ -37,7 +37,7 @@ one:
   current_login_ip: MyString
 
 two:
-  login: MyString
+  login: MyString2 
   crypted_password: MyString
   password_salt: MyString
   persistence_token: MyString
